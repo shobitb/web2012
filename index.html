@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Shobit Beltangdy</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css' />
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        
+        .container-fluid {
+            min-height: 400px;
+        }
+        
+        .footer {
+            padding: 20px;
+            color: #bbbbbb;
+        }
+        
+        .row-fluid .span3 {
+            padding: 100px 40px 40px 40px;
+        }
+        
+        .span3 ul a li {
+            padding: 10px;
+            font-size: large;
+            color: #57068C;
+        }
+        
+        a, a:hover {
+            color: #57068C;
+        }
+        
+        dt a:hover, dd a:hover {
+            color: #57068C;
+            text-decoration: underline;
+        }
+        
+        .span3 ul a:hover li:after {
+            text-decoration: none;
+            content: ' }';
+        }
+                
+        #photo, #about, #resume, #courses, #contact, #links {
+            padding-top: 30px;
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js">
+    </script>
+
+    <script>
+        
+        function content(type) {
+            
+            if(type === 'about') {
+                $("#about").show();
+                hide('#resume','#links','#courses','#contact');
+                
+            } else if (type === 'resume') {
+                $("#resume").show();
+                hide('#about','#links','#courses','#contact');
+                
+            } else if (type === 'links') {
+                $("#links").show();
+                hide('#about','#resume','#courses','#contact');
+                
+            } else if (type === 'courses') {
+                $("#courses").show();
+                hide('#about','#resume','#links','#contact');
+                
+            } else if (type === 'contact') {
+                $("#contact").show();                
+                hide('#about','#resume','#links','#courses');
+            }
+        }
+        
+        function hide(a,b,c,d) {
+            $(a).hide();
+            $(b).hide();
+            $(c).hide();
+            $(d).hide();
+        }
+        
+    </script>
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <ul style="list-style: none">
+                    <a href="javascript:void()" onclick="content('about')">
+                        <li>About Me</li> 
+                    </a>                   
+                   
+                    <a href="javascript:void()" onclick="content('resume')">
+                        <li>Resume</li> 
+                    </a>
+                    
+                     <a href="javascript:void()" onclick="content('links')">
+                        <li>Links</li> 
+                    </a>
+                    
+                    <a href="javascript:void()" onclick="content('courses')">
+                        <li>Courses</li> 
+                    </a>
+                    
+                    <a href="javascript:void()" onclick="content('contact')">
+                        <li>Contact</li> 
+                    </a>
+                </ul>
+            </div>
+            <div class="span6">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <h1>Shobit Beltangdy</h1>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12" id="photo">
+                        <img src="pic.jpg" width="100%" height="200px" alt="Photo"/>
+                    </div>
+                </div>
+                <div class="row-fluid" id="about" style="display:none">
+                    <div class="span12">
+                        <div>
+                            <h3>
+                                About Me
+                            </h3>
+                            <p>
+                                Hello. &nbsp;I'm Shobit. &nbsp;I'm a Master's in Computer Science student at New York University.
+                             &nbsp;I will be graduating in May 2013.
+                            </p>
+                            <p>
+                                Before I came to New York, I studied engineering (Bachelor's in IT) from University of Mumbai. &nbsp;
+                                On graduating, I worked at Infosys Ltd as a Systems Engineer where my primary responsibility was developing
+                                and maintaining our client's web application written in PHP, MySQL and JavaScript.
+                            </p>
+                            <p>
+                                I love computer science and technology, especially algorithms, databases, programming languages,
+                                graphics and the Web. &nbsp;I enjoy working on large programming projects and building applications. &nbsp;
+                                I primarily code in Java, but I also use C, C++ on some projects, PHP and JavaScript for web applications, and Ruby on Rails
+                                at work.
+                            </p>
+                            <p>
+                                Currently, I'm living in Seattle and working at Amazon as a Software Development Engineer Intern until August 2012.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>                
+                
+                 <div class="row-fluid"  id="resume" style="display:none">
+                    <div class="span12">
+                        <div >
+                            <h3>
+                                Resume
+                            </h3>
+                            <p>
+                                Here's a link to my resume:
+                                <br><a href="Resume_ShobitBeltangdy.pdf">Resume-2012.pdf</a>
+                                
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                 
+                <div class="row-fluid"  id="courses" style="display:none">
+                    <div class="span12">
+                        <div>
+                            <h3>
+                                Courses
+                            </h3>
+                            <p>
+                                I studied the following courses at New York University in the past year:
+                                <ul>
+                                    <li>Programming Languages</li>
+                                    <li>Operating Systems</li>
+                                    <li>Data Communication and Networks</li>
+                                </ul>
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>Fundamental Algorithms</li>
+                                    <li>Computer Graphics</li>
+                                    <li>Compiler Construction</li>
+                                </ul>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row-fluid"  id="links" style="display:none">
+                    <div class="span12">
+                        <div>
+                            <h3>
+                                Links
+                            </h3>
+                            <p>
+                                <dl>
+                                    <dt><a href = "http://bit.ly/shobitgx">Computer Graphics</a><dt>
+                                    <dd>Some cool CG applets I wrote while building a rendering engine in <a href="http://mrl.nyu.edu/~perlin">Professor Kenneth Perlin</a>'s class</dd>
+                                    <br>
+                                    <dt><a href = "http://dealupa.com">Dealupa</a></dt>
+                                    <dd>The best place for all the daily deals</dd>
+                                    <br>
+                                    <dt><a href = "http://goldspot.net/">Goldspot</a></dt>
+                                    <dd>My favorite band. &nbsp; Alternative rock with a <i>hint</i> of Bollywood! (try Friday, and Tale of a Fish)</dd>
+                                    <br>
+                                    <dt><a href = "http://www.youtube.com/user/DewarsIndia?feature=watch">The Dewarists</a></dt>
+                                    <dd>I love this show! &nbsp;Check out Episode 8 'No I.D. Required' feat. Monica Dogra, MIDIval Punditz, and Humble The Poet</dd>
+                                    <br>
+                                    <dt><a href = "http://learn.appendto.com/">appendTo</a></dt>
+                                    <dd>Excellent JavaScript screencasts</dd>
+                                    <br>
+                                </dl>
+                                
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                 
+                
+                <div class = "row-fluid" id="contact" style="display:none">
+                    <div class="span12">
+                        <div>
+                            <h3>
+                                Contact
+                            </h3>
+                            <p>
+                                I prefer emails to phone calls. &nbsp;I usually reply to emails within 24 hours of receiving them.
+                            </p>
+                            <p>
+                                My email in  <a href="http://en.wikipedia.org/wiki/Reverse_Polish_notation" style='color:black; text-decoration: underline'>reverse polish</a>
+                                notation is <b>shobit nyu edu . @</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+        <div class="container footer">
+            <footer class="span12">
+                <hr>
+                Built on a machine running
+                <a href="http://www.ubuntu.com/download" style='color:#bbbbbb; text-decoration: underline'>Ubuntu 12.04</a>
+                using
+                <a href="http://www.gimp.org/" style='color:#bbbbbb; text-decoration: underline'>gimp</a>, 
+                <a href="http://jquery.com" style='color:#bbbbbb; text-decoration: underline'>jQuery</a>, and 
+                <a href="http://github.com/twitter/bootstrap" style='color:#bbbbbb; text-decoration: underline'>Bootstrap</a><br>
+                06/29/2012
+            </footer>
+        </div>
+</body>
+</html>
